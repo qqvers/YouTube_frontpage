@@ -3,6 +3,7 @@
 }
 html {
   background-color: rgb(19, 18, 18);
+  overflow-x: hidden;
 }
 
 .custom-width {
@@ -11,4 +12,16 @@ html {
 button,
 img {
   cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: ytBlack;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
 }

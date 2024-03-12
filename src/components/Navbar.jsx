@@ -1,21 +1,13 @@
-import { IoMdMenu } from "react-icons/io";
 import { IoMdSearch } from "react-icons/io";
 import { FaMicrophone } from "react-icons/fa";
 import { RiVideoAddFill } from "react-icons/ri";
 import { FaBell } from "react-icons/fa";
-import logo from "../assets/yt_logo.png";
+import LogoAndMenu from "./LogoAndMenu";
 
-export default function Navbar() {
+export default function Navbar({ setShowLeftMenu }) {
   return (
     <div className="fixed bg-ytBlack flex justify-between items-center w-full h-16  text-white top-0 left-0 z-50">
-      <div className="flex items-center w-fit mr-32">
-        <div className="rounded-full h-full p-2 duration-100 hover:bg-gray-600 ml-6 mr-4 cursor-pointer">
-          <IoMdMenu size={30} className="" />
-        </div>
-        <img src={logo} alt="/" className="h-4" />
-        <span className=" font-bold">YouTube</span>
-        <span className="text-gray-200 text-[10px] ml-1">PL</span>
-      </div>
+      <LogoAndMenu setShowLeftMenu={setShowLeftMenu} />
 
       <div className="flex items-center w-1/2 max-w-2xl justify-end relative">
         <input
@@ -39,7 +31,11 @@ export default function Navbar() {
           <FaBell size={23} />
         </div>
 
-        <img src={logo} alt="profile_pic" className="rounded-full w-8 h-8 " />
+        <img
+          src="https://source.unsplash.com/random/32"
+          alt="profile_pic"
+          className="rounded-full w-8 h-8 mr-4"
+        />
       </div>
     </div>
   );
