@@ -3,7 +3,7 @@ import categories from "../data/categories";
 export default function Categories({ showLeftMenu }) {
   return (
     <div
-      className={`w-full flex items-center text-white mt-16 mx-4 md:ml-24 ${
+      className={`w-full flex items-center text-white overflow-hidden mt-16 mx-4 md:ml-24 ${
         showLeftMenu ? "xl:ml-64" : ""
       } custom-width`}
     >
